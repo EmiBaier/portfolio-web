@@ -95,6 +95,10 @@ footer span{
   justify-content: space-between;
 }
 
+.width-50{
+    width: 50%;
+}
+
 .width-70{
     width: 70%;
 }
@@ -223,6 +227,11 @@ footer span{
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(10, 1fr);
 }
+
+  #works a{
+    display: flex;
+    align-items: flex-end;
+  }
 
   #works-intro{
     display: flex;
