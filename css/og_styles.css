@@ -1,0 +1,88 @@
+carousel{
+  --controls-padding: -2.5rem; /* replace with desired padding */
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+carousel items{
+  --cols: 4; /* replace with number of cols */
+  --gap: 0rem; /* replace with desired gap */
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-auto-columns: calc(calc(100% / var(--cols)) - calc(var(--gap) / var(--cols) * calc(var(--cols) - 1)));
+  grid-auto-flow: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  touch-action: pan-x;
+}
+
+carousel item{
+  background-color: var(--parrot);
+}
+
+carousel item a{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items:flex-end;
+  padding: 0 0 40px 40px;
+  color: var(--milk);
+  background: rgb(26,27,29);
+  background: linear-gradient(0deg, rgba(26,27,29,0.2) 0%, rgba(26,27,29,0) 40%, rgba(26,27,29,0) 100%);
+  background-blend-mode: multiply;
+  opacity: 0;
+}
+
+carousel item a:hover{
+  opacity: 1;
+  transition: var(--transition);
+  animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+
+carousel item span p:first-child{
+}
+
+carousel button[type="prev"], carousel button[type="next"]{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  padding: 0px;
+  border: 0px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-position: center;
+  background-size: cover;
+  transition: var(--transition);
+}
+
+carousel button svg{
+  width: 40px;
+  height: 40px;
+}
+
+carousel button[type="prev"]{
+  left: var(--controls-padding);
+  background-image: url(../src/prev.svg);
+}
+
+carousel button[type="next"]{
+  right: var(--controls-padding);
+  background-image: url(../src/next.svg);
+}
+
+carousel button[type="prev"]:hover{
+  background-image: url(../src/prev-hover.svg);
+}
+
+carousel button[type="next"]:hover{
+  background-image: url(../src/next-hover.svg);
+}
+
+#more-projects{
+  padding: 20px 0 20px 0;
+  grid-area: 19/ 3 / 21 / 11;
+}

@@ -1,0 +1,309 @@
+:root{
+  /* colors */
+  --coal-1: #151517;
+  --coal-2: #1A1B1D;
+  --grave: #A839FF;
+  --dark-grave: #8000D4;
+  --milk: #EAEEF1;
+  --granada: #FF324B;
+  --water: #04A7CB;
+  --parrot: #A6C622;
+  --mango: #FA7C63;
+  --gum: #FF00FF;
+
+/* animations */
+  --transition: 0.3s;
+
+/* type-size */
+  --big: 25pt;
+  --medium: 20pt;
+  --normal: 12pt;
+  --small: 9pt;
+}
+
+html{
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  scroll-behavior: smooth;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*
+a:hover{
+  color: var(--grave);
+} */
+
+body{
+  height: 100%;
+  width: 100%;
+  background-image: url(../src/body-back.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'montserrat',sans-serif;
+
+  scroll-snap-type: y proximity;
+  overflow-y: scroll;
+}
+
+main{
+  display: flex;
+  background-color: var(--coal-1);
+  color: var(--milk);
+
+  grid-area: 1 / 1 / 1 / 17;
+  align-items: center;
+  justify-content: center;
+}
+
+main span{
+  width: 40%;
+  text-align: center;
+}
+
+section a{
+  color: var(--milk);
+}
+
+footer{
+  width: 100%;
+  height: 60px;
+  background-color: var(--coal-1);
+  padding: 0 40px;
+  color: var(--milk);
+}
+
+footer span{
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.width-70{
+    width: 70%;
+}
+
+.padd-20{
+  padding: 20px;
+}
+
+.padd-40{
+  padding: 40px;
+}
+
+.bold{
+  font-weight: 600;
+}
+
+.bolder{
+  font-weight: bold;
+}
+
+.coal-1{
+  background-color: var(--coal-1);
+}
+
+.coal-2{
+  background-color: var(--coal-2);
+}
+
+.floats{
+  position: absolute;
+  background-color: var(--grave)
+}
+
+.text-big{
+  font-size: var(--big);
+  margin-bottom: 20px;
+  line-height: 35px;
+  letter-spacing: -.5px;
+  font-weight: 600;
+}
+
+.text-medium{
+  font-size: var(--medium);
+  margin-bottom: 10px;
+  line-height: 35px;
+  letter-spacing: -.5px;
+  font-weight: 600;
+}
+
+.text-normal{
+  font-size: var(--normal);
+  line-height: 20px;
+  letter-spacing: .3px;
+}
+
+.text-small{
+  font-size: var(--small);
+  line-height: 15px;
+  margin-top: 4px;
+}
+
+.text-smaller{
+  font-size: var(--smaller);
+  margin-top: 4px;
+}
+
+.links-footer{
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+}
+
+#logo{
+  color: var(--coal-1);
+}
+
+#logo:hover{
+  color: var(--milk);
+  transition: var(--transition);
+}
+
+#go{
+  display: flex;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#go span{
+  display: flex;
+}
+
+#go a{
+  color: var(--coal-1);
+}
+
+#go a:hover{
+  color: var(--milk);
+  transition: var(--transition);
+}
+
+#go svg{
+  width: 12px;
+  height: 15px;
+  margin-left: 5px;
+  margin-top: 2px;
+  background-image: url(../src/arrow-down.svg);
+}
+
+#index{
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 20px;
+}
+
+#works{
+  width: 100%;
+  height: 180%;
+  color: var(--milk);
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+}
+
+  #works-intro{
+    display: flex;
+    height: 75%;
+    background-color: var(--grave);
+
+    grid-area: 1 / 1 / 3 / 3;
+  }
+
+  #work-1{
+    grid-area: 3 / 1 / 7 / 3;
+  }
+
+  #work-2{
+    grid-area: 1 / 3 / 4 / 5;
+  }
+
+  #work-3{
+    grid-area: 1 / 5 / 5 / 7;
+  }
+
+  #work-4{
+    grid-area: 5 / 3 / 8 / 5;
+  }
+
+  #work-5{
+    grid-area: 5 / 5 / 7 / 7;
+  }
+
+  #work-6{
+    grid-area: 7 / 1 / 9 / 3;
+  }
+
+  #work-7{
+    grid-area: 9 / 2 / 11 / 5;
+  }
+
+  #work-8{
+    grid-area: 8 / 5 / 11 / 7;
+  }
+
+  #works h2{
+    color: var(--grave);
+  }
+
+  #works-intro h2{
+    color: var(--milk);
+  }
+
+#ig{
+  background-image: url(../src/ig.svg);
+}
+
+#ig:hover{
+  background-image: url(../src/ig-h.svg);
+  transition: var(--transition);
+}
+
+#be{
+  background-image: url(../src/be.svg);
+}
+
+#be:hover{
+  background-image: url(../src/be-h.svg);
+  transition: var(--transition);
+}
+
+#os{
+  background-image: url(../src/os.svg);
+}
+
+#os:hover{
+  background-image: url(../src/os-h.svg);
+  transition: var(--transition);
+}
+
+#s{
+  background-image: url(../src/s.svg);
+}
+
+#s:hover{
+  background-image: url(../src/s-h.svg);
+  transition: var(--transition);
+}
